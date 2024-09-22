@@ -13,12 +13,12 @@ export const InputItems = ({ onAddItems }) => {
   });
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (description.length > 0) {
       setShowError(false);
     } else {
       setShowError(true);
     }
-    e.preventDefault();
     const newItem = {
       id: Date.now(),
       quantity,
